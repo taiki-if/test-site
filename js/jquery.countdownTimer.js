@@ -1,14 +1,15 @@
-/*! CountdownTimer for jQuery @version2.0.1 (https://harshen.github.io/jQuery-countdownTimer/).
- *  Written by Harshen Pandey (https://remote.com/harshen) January 2014.
- *  @license MIT (https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE.md)
- *  and GPLv3 (https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE-GPL.md).
- *  @release - @date
- *  Copyright (c) 2017 - 2020 Harshen Pandey
- *  Please attribute the author if you use it.
- */
-/* jQuery.countdownTimer.js*/
+$(function() {
 
-(function($) {
+    var $fvHeight = $('.timer_box').outerHeight();
+
+    $(window).scroll(function(){
+        if($(window).scrollTop() > $fvHeight ) {
+            $(".floating-nav").fadeIn(500).addClass("scroll");
+        } else {
+            $(".floating-nav").fadeOut(100).removeClass("scroll");
+        }
+    });
+
     "use strict";
 
     var methods = {
@@ -724,5 +725,7 @@
         labels: ['Years', 'Months', 'Days', 'Hours', 'Minutes', 'Seconds'],
         isRTL: false
     };
+
+    
 
 }(jQuery));
