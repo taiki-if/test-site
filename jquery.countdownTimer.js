@@ -1,14 +1,14 @@
-/*! CountdownTimer for jQuery @version2.0.1 (https://harshen.github.io/jQuery-countdownTimer/).
- *  Written by Harshen Pandey (https://remote.com/harshen) January 2014.
- *  @license MIT (https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE.md)
- *  and GPLv3 (https://github.com/harshen/jQuery-countdownTimer/blob/master/LICENSE-GPL.md).
- *  @release - @date
- *  Copyright (c) 2017 - 2020 Harshen Pandey
- *  Please attribute the author if you use it.
- */
-/* jQuery.countdownTimer.js*/
 
-(function($) {
+
+
+$(function() {
+
+    $(".btn").on("click", function(){
+    
+        $(".test-btn").toggleClass("abc");
+        
+    })
+
     "use strict";
 
     var methods = {
@@ -726,58 +726,5 @@
     };
 
 
-    function CountdownTimer(elm, tl, mes) {
-        this.initialize.apply(this, arguments);
-        }
-        CountdownTimer.prototype = {
-        initialize: function (elm, tl, mes) {
-        this.elem = document.getElementById(elm);
-        this.tl = tl;
-        this.mes = mes;
-        }, countDown: function () {
-        var timer = '';
-        var today = new Date();
-        var day = Math.floor((this.tl - today) / (24 * 60 * 60 * 1000));
-        var hour = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-        var min = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 1000)) % 60;
-        var sec = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 1000) % 60 % 60;
-        var milli = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 10) % 100;
-        var me = this;
-        
-        if ((this.tl - today) > 0) {
-        if (day)
-        timer += '' + day + '日';
-        if (hour)
-        timer += '' + hour + '時間';
-        timer += '' + this.addZero(min) + '分' +
-            this.addZero(sec) + '秒';
-        this.elem.innerHTML = timer;
-        tid = setTimeout(function () {
-        me.countDown();
-        }, 10);
-        } else {
-        this.elem.innerHTML = this.mes;
-        return;
-        }
-        }, addZero: function (num) {
-        return ('0' + num).slice(-2);
-        }
-        }
-        function CDT() {
-        var tl = new Date('2021/5/29 10:00:00');// ここで日付を指定
-        var timer = new CountdownTimer('CDT', tl, '終了しました');
-        timer.countDown();
-        }
-        
-        
-        function CDT01() {
-        var tl = new Date('2020/5/29 09:59:00');// ここで日付を指定
-        var timer = new CountdownTimer('CDT01', tl, '終了しました');
-        timer.countDown();
-        }
-        window.onload = function () {
-        CDT();
-        CDT01();
-        }
+});
 
-}(jQuery));

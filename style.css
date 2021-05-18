@@ -194,4 +194,20 @@ div.clock .placeholder {
 		font-size: 90px;
 	}
   
-
+  .test-btn {
+    display: block;
+    background: red;
+    color: #fff;
+    height: 50px;
+  }
+  
+  .test-btn.abc {
+    display: none;
+  }
+  
+  .btn {
+    display: block;
+    background: yellow;
+    color: #fff;
+    height: 50px;
+  }
