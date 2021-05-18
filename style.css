@@ -1,0 +1,197 @@
+﻿@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+}
+img {
+	width: 100%;
+}
+.wrapper {
+	width:100%;
+	max-width: 700px;
+	margin:0 auto;
+}
+.wrapper div {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0;
+}
+.video_box,.offer_box {
+	position: relative;
+}
+.video_inner,.offer_inner {
+	position: absolute;
+}
+.video01 {
+	width: 82%;
+	top: 50.5%;
+	text-align: right;
+}
+.video01 img {
+	width: 55%;
+}
+.video02 {
+	width:35.5%;
+	top: 24.5%;
+	right: 40%;
+}
+.video03 {
+	width: 100%;
+	top: 61.5%;
+	text-align: center;
+}
+.video03 img {
+	width: 65%;
+}
+.video04 {
+	width: 94.5%;
+	top: 48.5%;
+	text-align: right;
+}
+.video04 video {
+	width: 45%;
+}
+.btn {
+	margin: 0 auto;
+	text-align: center;
+}
+.btn img {
+	width: 90%;
+	animation: anime1 0.5s ease 0s infinite alternate;
+ 	transform-origin:center;
+}
+@keyframes anime1 {
+  from {
+    transform: scale(0.9,0.9);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+.btn01{
+	bottom:3.3%;
+}
+.btn02{
+	bottom:7.5%;
+}
+
+#pc_pagetop{
+  bottom: 0px;
+  position: fixed;
+  left: 10vw;
+  z-index: 1;
+}
+#pc_pagetop img{
+    width: 314px;
+}
+
+main {
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'digital-7', sans-serif;
+}
+main {
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border: solid 5px #ffffff;
+}
+
+div.days {
+    margin: 0 auto;
+    color: #131212;
+}
+
+div.days .day {
+    display: inline-block;
+}
+
+div.days .day p {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+div.clock div{
+    display: inline-block;
+    position: relative;
+}
+
+div.clock div p{
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+div.clock .placeholder {
+    color: #131212;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+.light-on {
+    color: #ffffff;
+}
+/*=========タイマーここから===================*/
+.timer_box {
+	position: relative;
+	width: 100%;
+}
+/* .timer_box div {
+} */
+.timer_box span{
+	width: 100%;
+	text-align: center;
+	font-size: 12.5vw;
+	color: red;
+	font-weight: bold;
+}
+#ms_timer {
+	position: absolute;
+	top: 49%;
+}
+#ms_timer:before {
+	content:"残り時間 ";
+	font-size: 55%;
+}
+/* =============================================【PC】レスポンシブcssここから=============================================*/
+@media only screen and (min-width: 480px) {
+
+
+  body {
+    background: url("../img/bg_wh.jpg") no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+
+  #pc_pagetop {
+    bottom: 6px;
+    left: 50%;
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%);
+    max-width: 624px;
+  }
+  #pc_pagetop img {
+    width: 100%;
+  }
+
+  .sp_only {
+    display: none;
+  }
+}
+	.timer_box span {
+		width: 700px;
+		font-size: 90px;
+	}
+  
+
