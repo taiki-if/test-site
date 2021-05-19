@@ -15,7 +15,7 @@ $(function() {
       var sec = 00;
       var msec = 00;
       setInterval(function() {
-        document.getElementById("timer").innerHTML = "<div class='inner_timer'>" + ("0" + minute).slice(-2) + " : " + ("0" + sec).slice(-2) + " : " + ("0" + msec).slice(-2) + "</div>";
+        document.getElementById("timer").innerHTML = "<div class='inner_timer'>" + ("00:") + ("0" + minute).slice(-2) + ":" + ("0" + sec).slice(-2) + ":" + ("0" + msec).slice(-2) + "</div>";
         msec--;
         if (msec == -1) {
           sec--;
