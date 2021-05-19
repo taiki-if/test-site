@@ -4,6 +4,13 @@
   padding: 0px;
 }
 
+.osu {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: #fff;
+}
+
 html {
   width: 100%;
 }
@@ -146,71 +153,153 @@ div.clock .placeholder {
   max-width: 700px;
 }
 
-.timer_box__copy {
+.timer_box__copy.scroll {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 49%;
-  color: red;
+  position: fixed;
+  top: 5px;
+  background-image: url(../img/shampoo01_resize.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70px;
+  border-radius: 30px;
+  z-index: 101;
 }
 
-.jst-hours {
+.timer_box__note {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
 }
 
-.ms_timer {
+.timer_box__note.scroll {
+  display: block;
+}
+
+.timer_box__items {
   display: flex;
-  font-size: 11vw;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+}
+
+.timer_box__items.scroll {
+  top: 55px;
+} 
+
+.ms_timer {
+  font-size: 10vw;
   font-weight: bold;
+  color: red;
+}
+
+.ms_timer.scroll {
+  font-size: 8vw;
 }
 
 .timer_box__time {
 	font-size: 7vw;
   font-weight: bold;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-right: 3%;
+  color: red;
 }
 
-@media (min-width: 700px) {
+.timer_box__time.scroll {
+	font-size: 5vw;
+}
+
+
+@media (min-width: 420px) {
+  
+  .timer_box__copy.scroll {
+    max-width: 430px;
+    height: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timer_box__note {
+    font-size: 18px;
+    top: 15px;
+  }
+  
+  .timer_box__items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timer_box__items.scroll {
+    top: 60px;
+  } 
+  
   .ms_timer {
-    font-size: 80px;
+    font-size: 40px;
+  }
+  
+  .ms_timer.scroll {
+    font-size: 36px;
+  }
+  
+  .timer_box__time {
+    font-size: 30px;
+  }
+  
+  .timer_box__time.scroll {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 600px) {
+
+  .timer_box__items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .timer_box__time {
-    font-size:  50px;
+  .ms_timer {
+    font-size: 60px;
   }
+  
+  .ms_timer.scroll {
+    font-size: 36px;
+  }
+  
+  .timer_box__time {
+    font-size: 40px;
+  }
+  
+  .timer_box__time.scroll {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-right: 3%;
+  }
+
 }
 
 .timer_box {
   max-width: 700px;
 }
 
-.floating-nav {
-  width: 90%;
-  position: fixed;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 101;
-  display: none;
-  transition: all .3s;
-}
-
-.floating-nav.scroll {
-  display: block;
-  transition: all .3s;
-}
-
-.floating-nav__note {
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  top: 15px;
-  left: 0;
-  font-size: 6vw;
-  font-weight: bold;
-}
 
 .fa-exclamation-triangle.before{
   margin-right: 10px;
@@ -218,72 +307,6 @@ div.clock .placeholder {
 
 .fa-exclamation-triangle.after {
   margin-left: 10px;
-}
-
-.floating-nav__pic {
-  max-width: 700px;
-  height: 100px;
-}
-
-.floating-nav__pic img {
-  max-width: 700px;
-  height: 100px;
-  border-radius: 40px;
-}
-
-.floating-nav__copy {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 70px;
-  left: 0;
-  color: red;
-}
-
-.floating-nav__time {
-  font-size: 6vw;  
-  margin-top: 3px;
-  font-weight: bold;
-  margin-right: 3%;
-}
-
-.ms_timer.floating {
-  font-size: 10vw;
-}
-
-@media (min-width: 480px) {
-
-  .floating-nav {
-    max-width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .floating-nav__pic {
-    height: 110px;
-  }
-  
-  .floating-nav__pic img {
-    height: 110px;
-  }
-
-  .floating-nav__copy {
-    top: 80px;
-  }
-
-  .floating-nav__note {
-    font-size: 30px;
-  }
-
-  .floating-nav__time {
-    font-size: 30px;  
-    margin-top: 3px;
-  }
-  
-  .ms_timer.floating {
-    font-size: 50px;
-  }
 }
 
 
