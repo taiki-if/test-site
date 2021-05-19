@@ -1,8 +1,5 @@
 (function() {
 
-
-    $("p").html($("span").html());
-
     var $fvHeight = $('.timer_box').outerHeight();
 
     $(window).scroll(function(){
