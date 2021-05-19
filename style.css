@@ -4,6 +4,13 @@
   padding: 0px;
 }
 
+.osu {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: #fff;
+}
+
 html {
   width: 100%;
 }
@@ -15,10 +22,10 @@ img {
 	width: 100%;
 }
 .wrapper {
-	width:100%;
 	max-width: 700px;
-	margin:0 auto;
+	margin: 0 auto;
 }
+
 .wrapper div {
     margin: 0px;
     padding: 0px;
@@ -143,25 +150,148 @@ div.clock .placeholder {
 /*=========タイマーここから===================*/
 .timer_box {
 	position: relative;
-	width: 100%;
+  max-width: 700px;
 }
-/* .timer_box div {
-} */
-.timer_box span{
-	width: 100%;
-	text-align: center;
-	font-size: 12.5vw;
-	color: red;
-	font-weight: bold;
+
+.timer_box__copy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 49%;
+  color: red;
 }
-#ms_timer {
-	position: absolute;
-	top: 49%;
+
+
+.ms_timer {
+  display: flex;
+  font-size: 11vw;
+  font-weight: bold;
 }
-#ms_timer:before {
-	content:"残り時間 ";
-	font-size: 55%;
+
+.timer_box__time {
+	font-size: 7vw;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-right: 3%;
 }
+
+@media (min-width: 700px) {
+  .ms_timer {
+    font-size: 80px;
+  }
+
+  .timer_box__time {
+    font-size:  50px;
+  }
+}
+
+.timer_box {
+  max-width: 700px;
+}
+
+.floating-nav {
+  width: 90%;
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 101;
+  display: none;
+  transition: all .3s;
+}
+
+.floating-nav.scroll {
+  display: block;
+  transition: all .3s;
+}
+
+.floating-nav__note {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 13px;
+  left: 0;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.fa-exclamation-triangle.before{
+  margin-right: 10px;
+}
+
+.fa-exclamation-triangle.after {
+  margin-left: 10px;
+}
+
+.floating-nav__pic {
+  max-width: 700px;
+  height: 70px;
+}
+
+.floating-nav__pic img {
+  max-width: 700px;
+  height: 70px;
+  border-radius: 40px;
+}
+
+.floating-nav__copy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 47px;
+  left: 0;
+  color: red;
+}
+
+.floating-nav__time {
+  font-size: 4vw;  
+  margin-top: 2px;
+  font-weight: bold;
+  margin-right: 3%;
+}
+
+.ms_timer.floating {
+  font-size: 7vw;
+}
+
+@media (min-width: 480px) {
+
+  .floating-nav {
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .floating-nav__pic {
+    height: 80px;
+  }
+  
+  .floating-nav__pic img {
+    height: 80px;
+  }
+
+  .floating-nav__copy {
+    top: 55px;
+  }
+
+  .floating-nav__note {
+    font-size: 18px;
+    top: 15px;
+  }
+
+  .floating-nav__time {
+    font-size: 20px;  
+    margin-top: 0px;
+  }
+  
+  .ms_timer.floating {
+    font-size: 28px;
+  }
+}
+
+
 /* =============================================【PC】レスポンシブcssここから=============================================*/
 @media only screen and (min-width: 480px) {
 
@@ -189,25 +319,15 @@ div.clock .placeholder {
     display: none;
   }
 }
-	.timer_box span {
-		width: 700px;
-		font-size: 90px;
-	}
+.timer_box span {
+  width: 700px;
+  font-size: 90px;
+}
   
-  .test-btn {
-    display: block;
-    background: red;
-    color: #fff;
-    height: 50px;
-  }
-  
-  .test-btn.abc {
-    display: none;
-  }
-  
-  .btn {
-    display: block;
-    background: yellow;
-    color: #fff;
-    height: 50px;
-  }
+
+#countOutput {
+  position: fixed;
+  top: 200px;
+  height: 300px;
+  font-size: 20px;
+}

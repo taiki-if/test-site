@@ -7,12 +7,15 @@
 	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
 		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-
-	<!-- <script src="js/jquery-3.6.0.min.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.simple.timer.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<script>
+		$(function () {
+			$('.timer').startTimer();
+		});
+	</script>
 </head>
 
 <body>
@@ -23,8 +26,7 @@
 			</div>
 			<div class="timer_box__copy">
 				<p class="timer_box__time">残り時間</p>
-				<div id="timer" class='timer ms_timer'>00:00.000</div>
-				<!-- <div class='timer ms_timer' data-minutes-left="30"></div> -->
+				<div class='timer ms_timer' data-minutes-left="30"></div>
 			</div>
 		</div>
 
@@ -33,12 +35,11 @@
 				<img src="img/shampoo01_resize.jpg" alt="要注意 30分だけのお知らせ">
 			</div>
 			<p class="floating-nav__note">
-				<i class="fas fa-exclamation-triangle before"></i>要 注 意<i class="fas fa-exclamation-triangle after"></i>
+				<i class="fas fa-exclamation-triangle before"></i>お急ぎください!<i class="fas fa-exclamation-triangle after"></i>
 			</p>
 			<div class="floating-nav__copy">
 				<p class="floating-nav__time">残り時間</p>
-				<div id="timer" class='timer ms_timer floating'>00:00.000</div>
-				<!-- <div class='timer ms_timer floating' data-minutes-left="30"></div> -->
+				<div class='timer ms_timer floating' data-minutes-left="30"></div>
 			</div>
 		</div>
 
