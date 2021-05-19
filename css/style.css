@@ -172,6 +172,7 @@ div.clock .placeholder {
   position: fixed;
   top: 15px;
   left: 50%;
+  font-weight: bold;
   transform: translateX(-50%);
   display: none;
 }
