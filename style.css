@@ -256,7 +256,7 @@ div.clock .placeholder {
   font-size: 7vw;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 420px) {
 
   .floating-nav {
     max-width: 600px;
@@ -265,7 +265,7 @@ div.clock .placeholder {
   }
 
   .floating-nav__pic {
-    height: 80px;
+    height: 90px;
   }
   
   .floating-nav__pic img {
@@ -273,7 +273,7 @@ div.clock .placeholder {
   }
 
   .floating-nav__copy {
-    top: 55px;
+    top: 57px;
   }
 
   .floating-nav__note {
@@ -287,7 +287,7 @@ div.clock .placeholder {
   }
   
   .ms_timer.floating {
-    font-size: 28px;
+    font-size: 34px;
   }
 }
 
