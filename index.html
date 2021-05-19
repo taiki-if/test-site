@@ -1,86 +1,91 @@
-<html>
-<head><meta charset="UTF-8">
+<!DOCTYPE html>
+<lang lang="ja">
+<head>
+	<meta charset="UTF-8">
 	<title>HAIRICHE｜育毛剤公式通販</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.simple.timer.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<script>
+		$(function () {
+			$('.timer').startTimer();
+		});
+	</script>
 </head>
-<body>
-<div class="wrapper">
-	<div class="timer_box">
-		<div>
-			<img src="img/shampoo01_cont00.jpg" alt="要注意 30分だけのお知らせ">
-		</div>
-		<div class="timer_box__copy">
-			<p class="timer_box__time">残り時間</p>
-			<p class="ms_timer"></p>
-		</div>
-	</div>
-<script>
-$(function(){
-  $('.ms_timer').countdowntimer({
-    minutes :30,
-    size : "lg"
-  });
-});
-</script>
-	<div class="floating-nav">
-		<div class="floating-nav__pic">
-			<img src="img/shampoo01_resize.jpg" alt="要注意 30分だけのお知らせ">
-		</div>
-		<p class="floating-nav__note">
-			<i class="fas fa-exclamation-triangle before"></i>要 注 意<i class="fas fa-exclamation-triangle after"></i>
-		</p>
-		<div class="floating-nav__copy">
-			<p class="floating-nav__time">残り時間</p>
-			<p class="ms_timer floating"></p>
-	</div>
-</div>
 
-	<div><img src="img/shampoo_backend_01.jpg" alt="この度はHAIRICHE薬用スカルプエッセンスをご購入いただきましてありがとうございます"></div>
-	<div><img src="img/shampoo_backend_02.jpg" alt="ボリュームのあるふわふわ髪を手に入れることができます！"></div>
-	<div><img src="img/shampoo_backend_03.jpg" alt="とは言っても・・・効果が出るまで何ヶ月も待てない！と思ったあなた！ご安心ください！"></div>
-	<div><img src="img/shampoo_backend_04.jpg" alt="特別な炭酸シャンプーをご用意しました！"></div>
-	<div><img src="img/shampoo_backend_05.jpg" alt="育毛剤の効果を最大限高めるヘアリシェのトリプル製法"></div>
-	<div><img src="img/okoe.jpg" alt="ご愛用者様からの感動の声"></div>
-	<div class="offer_box">
-		<div><img src="img/shampoo_backend_18.jpg" alt="この記事限定！初回限定価格で77％OFF"></div>
-		<div class="offer_inner btn btn01"><a href="#chatform"><img src="img/btn.png"></a></div>
+<body>
+	<div class="wrapper">
+		<div class="timer_box">
+			<div>
+				<img src="img/shampoo01_cont00.jpg" alt="要注意 30分だけのお知らせ">
+			</div>
+			<div class="timer_box__copy">
+				<p class="timer_box__time">残り時間</p>
+				<div class='timer ms_timer' data-minutes-left="30"></div>
+			</div>
+		</div>
+
+		<div class="floating-nav">
+			<div class="floating-nav__pic">
+				<img src="img/shampoo01_resize.jpg" alt="要注意 30分だけのお知らせ">
+			</div>
+			<p class="floating-nav__note">
+				<i class="fas fa-exclamation-triangle before"></i>要 注 意<i class="fas fa-exclamation-triangle after"></i>
+			</p>
+			<div class="floating-nav__copy">
+				<p class="floating-nav__time">残り時間</p>
+				<div class='timer ms_timer floating' data-minutes-left="30"></div>
+			</div>
+		</div>
+
+		<div><img src="img/shampoo_backend_01.jpg" alt="この度はHAIRICHE薬用スカルプエッセンスをご購入いただきましてありがとうございます"></div>
+		<div><img src="img/shampoo_backend_02.jpg" alt="ボリュームのあるふわふわ髪を手に入れることができます！"></div>
+		<div><img src="img/shampoo_backend_03.jpg" alt="とは言っても・・・効果が出るまで何ヶ月も待てない！と思ったあなた！ご安心ください！"></div>
+		<div><img src="img/shampoo_backend_04.jpg" alt="特別な炭酸シャンプーをご用意しました！"></div>
+		<div><img src="img/shampoo_backend_05.jpg" alt="育毛剤の効果を最大限高めるヘアリシェのトリプル製法"></div>
+		<div><img src="img/okoe.jpg" alt="ご愛用者様からの感動の声"></div>
+		<div class="offer_box">
+			<div><img src="img/shampoo_backend_18.jpg" alt="この記事限定！初回限定価格で77％OFF"></div>
+			<div class="offer_inner btn btn01"><a href="#chatform"><img src="img/btn.png"></a></div>
+		</div>
+		<div><img src="img/shampoo_backend_19.jpg" alt="注記"></div>
+		<div><img src="img/shampoo_backend_09.jpg" alt="炭酸シャンプーと一緒に使用するのが効果的なの？"></div>
+		<div class="video_box">
+			<div><img src="img/shampoo_backend_10.jpg" alt="ヘアリシェ育毛メソッド"></div>
+			<div class="video_inner video01"><img src="img/video01.gif"></div>
+		</div>
+		<div><img src="img/shampoo_backend_11.jpg" alt="10,000ppmのもちもち炭酸泡で細かい泡が、毛穴まで入り込む！"></div>
+		<div class="video_box">
+			<div><img src="img/shampoo_backend_12.jpg" alt="アミノ酸系洗浄成分と４種の高級レアオイルで髪や頭皮に優しい処方！"></div>
+			<div class="video_inner video02"><img src="img/video02.gif"></div>
+		</div>
+		<div class="video_box">
+			<div><img src="img/shampoo_backend_13.jpg" alt="炭酸パワーで毛穴の状態はここまで変わるんです！"></div>
+			<div class="video_inner video03"><img src="img/video03.gif"></div>
+		</div>
+		<div><img src="img/shampoo_backend_14.jpg" alt="女性の薄毛悩みにWアプローチ!"></div>
+		<div><img src="img/shampoo_backend_15.jpg" alt="炭酸シャンプーでごっそり汚れを落とせるから、育毛剤の有効成分がぐんぐん浸透！"></div>
+		<div><img src="img/ranking_5kan.jpg" alt="楽天市場ランキング5冠達成"></div>
+		<div><img src="img/shampoo01_cont09-00.jpg" alt="おかげさまで雑誌でも話題！"></div>
+		<div class="video_box">
+			<div><img src="img/shampoo_backend_24.jpg" alt="今まで悩んでいたのがウソみたい！"></div>
+			<div class="video_inner video04"><video src="img/ookawa.mp4" muted autoplay playinline loop></video></div>
+		</div>
+		<div><img src="img/shampoo_backend_25.jpg" alt="バスタイムが楽しみに！"></div>
+		<div class="offer_box">
+			<div><img src="img/shampoo_backend_18.jpg" alt="この記事限定！初回限定価格で77％OFF"></div>
+			<div class="offer_inner btn btn01"><a href="#chatform"><img src="img/btn.png"></a></div>
+		</div>
+		<div><img src="img/shampoo_backend_19.jpg" alt="注記"></div>
+		<div><img src="img/shampoo01_attn.jpg" alt="ご安心ください"></div>
+		<div><img src="img/shampoo_backend_17.jpg" alt="最速で実現 理想のボリューム美髪へ！"></div>
 	</div>
-	<div><img src="img/shampoo_backend_19.jpg" alt="注記"></div>
-	<div><img src="img/shampoo_backend_09.jpg" alt="炭酸シャンプーと一緒に使用するのが効果的なの？"></div>
-	<div class="video_box">
-		<div><img src="img/shampoo_backend_10.jpg" alt="ヘアリシェ育毛メソッド"></div>
-		<div class="video_inner video01"><img src="img/video01.gif"></div>
-	</div>
-	<div><img src="img/shampoo_backend_11.jpg" alt="10,000ppmのもちもち炭酸泡で細かい泡が、毛穴まで入り込む！"></div>
-	<div class="video_box">
-		<div><img src="img/shampoo_backend_12.jpg" alt="アミノ酸系洗浄成分と４種の高級レアオイルで髪や頭皮に優しい処方！"></div>
-		<div class="video_inner video02"><img src="img/video02.gif"></div>
-	</div>
-	<div class="video_box">
-		<div><img src="img/shampoo_backend_13.jpg" alt="炭酸パワーで毛穴の状態はここまで変わるんです！"></div>
-		<div class="video_inner video03"><img src="img/video03.gif"></div>
-	</div>
-	<div><img src="img/shampoo_backend_14.jpg" alt="女性の薄毛悩みにWアプローチ!"></div>
-	<div><img src="img/shampoo_backend_15.jpg" alt="炭酸シャンプーでごっそり汚れを落とせるから、育毛剤の有効成分がぐんぐん浸透！"></div>
-	<div><img src="img/ranking_5kan.jpg" alt="楽天市場ランキング5冠達成"></div>
-	<div><img src="img/shampoo01_cont09-00.jpg" alt="おかげさまで雑誌でも話題！"></div>
-	<div class="video_box">
-		<div><img src="img/shampoo_backend_24.jpg" alt="今まで悩んでいたのがウソみたい！"></div>
-		<div class="video_inner video04"><video src="img/ookawa.mp4" muted autoplay playinline loop></video></div>
-	</div>
-	<div><img src="img/shampoo_backend_25.jpg" alt="バスタイムが楽しみに！"></div>
-	<div class="offer_box">
-		<div><img src="img/shampoo_backend_18.jpg" alt="この記事限定！初回限定価格で77％OFF"></div>
-		<div class="offer_inner btn btn01"><a href="#chatform"><img src="img/btn.png"></a></div>
-	</div>
-	<div><img src="img/shampoo_backend_19.jpg" alt="注記"></div>
-	<div><img src="img/shampoo01_attn.jpg" alt="ご安心ください"></div>
-	<div><img src="img/shampoo_backend_17.jpg" alt="最速で実現 理想のボリューム美髪へ！"></div>
-</div>
-<script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>

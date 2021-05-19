@@ -155,9 +155,13 @@ div.clock .placeholder {
   color: red;
 }
 
+.jst-hours {
+  display: none;
+}
+
 .ms_timer {
+  display: flex;
   font-size: 11vw;
-  margin-left: 3%;
   font-weight: bold;
 }
 
@@ -165,6 +169,7 @@ div.clock .placeholder {
 	font-size: 7vw;
   font-weight: bold;
   margin-top: 3px;
+  margin-right: 3%;
 }
 
 @media (min-width: 700px) {
@@ -240,6 +245,7 @@ div.clock .placeholder {
   font-size: 6vw;  
   margin-top: 3px;
   font-weight: bold;
+  margin-right: 3%;
 }
 
 .ms_timer.floating {
@@ -313,3 +319,10 @@ div.clock .placeholder {
   font-size: 90px;
 }
   
+
+#countOutput {
+  position: fixed;
+  top: 200px;
+  height: 300px;
+  font-size: 20px;
+}
