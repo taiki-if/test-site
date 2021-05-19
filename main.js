@@ -1,4 +1,4 @@
-(function() {
+$(function() {
 
     var $fvHeight = $('.timer_box').outerHeight();
 
@@ -44,4 +44,4 @@
       countDown();
     };
 
-  })();
+  });
