@@ -11,14 +11,48 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.simple.timer.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-	<script>
+	<!-- <script>
 		$(function () {
 			$('.timer').startTimer();
 		});
-	</script>
+	</script> -->
+
+<!-- <div class="timer_wrap">
+	<div class="timer" id="timer">
+		<div class="inner_timer">
+		</div>
+	</div>
+</div> -->
 </head>
 
 <body>
+
+	<script>
+    window.onload = function() {
+      var minute = 30;
+      var sec = 00;
+      var msec = 00;
+      setInterval(function() {
+        document.getElementById("timer").innerHTML = "<div class='inner_timer'>" + ("0" + minute).slice(-2) + " : " + ("0" + sec).slice(-2) + " : " + ("0" + msec).slice(-2) + "</div>";
+        msec--;
+        if (msec == -1) {
+          sec--;
+          msec = 99
+          if (sec == -1) {
+            minute--;
+            sec = 59;
+            if (minute == -1) {
+              minute = 0;
+              sec = 0;
+              msec = 0;
+            }
+          }
+        }
+      }, 10);
+    }
+  </script>
+
+
 	<div class="wrapper">
 		<div class="timer_box">
 			<div>
@@ -26,7 +60,8 @@
 			</div>
 			<div class="timer_box__copy">
 				<p class="timer_box__time">残り時間</p>
-				<div class='timer ms_timer' data-minutes-left="30"></div>
+				<div class="timer ms_timer" id="timer"></div>
+				<!-- <div class='timer ms_timer' data-minutes-left="30"></div> -->
 			</div>
 		</div>
 
@@ -39,7 +74,8 @@
 			</p>
 			<div class="floating-nav__copy">
 				<p class="floating-nav__time">残り時間</p>
-				<div class='timer ms_timer floating' data-minutes-left="30"></div>
+				<div class="timer ms_timer floating" id="timers"></div>
+				<!-- <div class='timer ms_timer floating' data-minutes-left="30"></div> -->
 			</div>
 		</div>
 
